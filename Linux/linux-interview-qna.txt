@@ -1,0 +1,98 @@
+1. What is Linux?
+Linux is an open-source, Unix-like operating system kernel widely used in servers, cloud platforms, and DevOps environments.
+
+2. Why is Linux important for DevOps?
+Most servers, containers, CI/CD tools, and cloud platforms run on Linux, making it essential for automation, scalability, and reliability.
+
+3. What is a Linux distribution?
+A Linux distribution is the Linux kernel packaged with system tools, libraries, and a package manager such as Ubuntu or Amazon Linux.
+
+4. Explain Linux architecture.
+Linux architecture consists of Hardware, Kernel, Shell, and Applications.
+
+5. What is the Linux kernel?
+The kernel is the core of Linux that manages CPU, memory, disk, networking, and hardware communication.
+
+6. What is the root directory in Linux?
+The root directory (/) is the top-level directory from which all files and folders originate.
+
+7. What is the purpose of the /etc directory?
+The /etc directory stores system-wide configuration files.
+
+8. Where are logs stored in Linux?
+Most system logs are stored in the /var/log directory.
+
+9. Explain Linux file permissions.
+Linux file permissions define read, write, and execute access for owner, group, and others.
+
+10. What does chmod 755 mean?
+It gives full permissions to the owner and read and execute permissions to group and others.
+
+11. What is the use of chown?
+The chown command is used to change file or directory ownership.
+
+12. Where is user information stored in Linux?
+User information is stored in the /etc/passwd file.
+
+13. Where are encrypted passwords stored?
+Encrypted passwords are stored in the /etc/shadow file.
+
+14. Why is /etc/shadow more secure than /etc/passwd?
+Because only the root user can read it, preventing unauthorized access to passwords.
+
+15. How do you check running processes in Linux?
+Using commands such as ps, top, or htop.
+
+16. What is the difference between kill and kill -9?
+kill sends a graceful termination signal, while kill -9 forcefully stops the process.
+
+17. What is a zombie process?
+A zombie process is a terminated process whose entry still exists in the process table.
+
+18. How do you check the IP address in Linux?
+Using the ip a command.
+
+19. How do you check open ports in Linux?
+Using ss -tuln or netstat -tuln.
+
+20. What is the default port for SSH?
+The default port for SSH is 22.
+
+21. What is the difference between df and du?
+df shows disk usage by filesystem, while du shows disk usage by files and directories.
+
+22. How do you check memory usage in Linux?
+Using the free -h command.
+
+23. What is a package manager?
+A package manager is a tool used to install, update, and remove software packages.
+
+24. Which package manager is used in Ubuntu?
+The apt package manager is used in Ubuntu.
+
+25. Which package manager is used in RHEL/CentOS?
+yum or dnf is used in RHEL and CentOS.
+
+26. How do you monitor logs in real time?
+Using the tail -f command.
+
+27. Where are authentication logs stored?
+Authentication logs are stored in /var/log/auth.log.
+
+28. Why is shell scripting important in DevOps?
+Shell scripting automates repetitive tasks such as deployments, monitoring, and backups.
+
+29. What does #!/bin/bash mean?
+It tells the system to execute the script using the Bash shell.
+
+30. A Linux server is slow. What will you check first?
+CPU usage, memory usage, disk usage, running processes, and system logs.
+
+31. How does Linux help in CI/CD pipelines?
+Linux provides scripting, automation, container support, and a stable execution environment.
+
+32. Why should chmod 777 be avoided?
+It gives full access to everyone and creates serious security risks.
+
+33. How do you run a command as root?
+Using the sudo command.
