@@ -1,59 +1,70 @@
 # Virtual Machines – DevOps Learning
 
 ## Overview
-Virtual Machines (VMs) are a foundational concept in DevOps and cloud computing.  
-Before working with automation tools, containers, or cloud platforms, it is essential to understand how virtualized systems behave at the operating system and infrastructure level.
+Virtual Machines (VMs) are a core building block of DevOps and cloud infrastructure.  
+Before moving into automation, containers, or cloud services, it is essential to understand how virtual machines are created, configured, networked, and accessed **manually**.
 
-This section documents my **hands-on learning of Virtual Machines**, focusing on **manual setup, configuration, networking, and access**.
+This directory documents my hands-on learning of virtual machines using a local hypervisor, with a strong focus on fundamentals that directly translate to real-world DevOps environments.
 
 ---
 
 ## DevOps Thumb Rule
 > **If you want to automate something, you must first know how to do it manually.**
 
-In DevOps, automation is built on top of understanding.  
-Blind automation without manual knowledge leads to fragile systems and poor troubleshooting.
+In DevOps, automation is not a replacement for understanding—it is an extension of it.  
+Poor automation often comes from skipping the manual phase.
 
-For this reason:
-- Virtual machines are created **manually**
-- Operating systems are installed **step by step**
-- Networking and access are configured **without automation tools**
+For this reason, virtual machines in this section were:
+- Created manually
+- Installed step by step
+- Networked and accessed without automation tools
 
 Automation will be introduced only after these fundamentals are clearly understood.
 
 ---
 
-## Virtualization Approach
+## Virtualization Environment
 - **Hypervisor:** Oracle VirtualBox  
 - **Hypervisor Type:** Type 2 (Hosted Hypervisor)  
 - **Host Operating System:** Windows  
 
-Oracle VirtualBox allows multiple isolated guest operating systems to run on a single physical machine and provides a practical learning environment for virtualization concepts.
+Oracle VirtualBox provides a practical environment to understand virtualization concepts such as isolation, resource allocation, and networking.
 
 ---
 
-## Virtual Machines Covered
-This section currently includes the following virtual machines:
+## Virtual Machines Managed
+Two virtual machines were created and managed manually for learning purposes:
 
-| VM Name     | Operating System     | Purpose |
-|------------|----------------------|--------|
-| `centosvm` | CentOS Stream 9      | Enterprise Linux, server-side concepts |
-| `ubuntuvm` | Ubuntu Linux         | General Linux usage and DevOps tooling |
+| VM Name     | Operating System | Status |
+|------------|------------------|--------|
+| `centosvm` | CentOS Stream 9  | Fully documented |
+| `ubuntuvm` | Ubuntu Linux     | Used for practice only |
 
-Each virtual machine is documented separately with installation steps, networking configuration, and SSH access.
+While both VMs were managed manually, **only CentOS is documented in detail** in this repository.  
+This decision was made to avoid duplication, as the core VM concepts remain the same across Linux distributions.
 
 ---
 
-## Learning Objectives
-Through manual VM management, this section aims to build understanding of:
-- Hardware abstraction (CPU, memory, storage)
-- OS-level isolation
-- Linux distribution differences
-- VM networking (NAT vs Bridged)
+## Why CentOS Is Documented
+CentOS Stream 9 was chosen as the primary documented VM because:
+- It represents enterprise Linux environments
+- It closely aligns with RHEL-based production systems
+- It is commonly encountered in server and cloud workloads
+
+Once the workflow is understood for one Linux distribution, it can be easily replicated for others.
+
+---
+
+## What Is Covered
+The CentOS VM documentation includes:
+- Manual VM creation
+- OS installation
+- Bridged networking configuration
+- IP discovery using `ip addr show`
 - Remote access using SSH
-- Environment reproducibility
+- Verification of remote connectivity
 
-These concepts directly map to real-world DevOps infrastructure.
+This mirrors how real servers are provisioned and accessed in production.
 
 ---
 
@@ -66,11 +77,4 @@ Virtual-Machines/
 │   ├── installation.md
 │   ├── networking.md
 │   └── ssh.md
-├── ubuntu/
-│   ├── README.md
-│   ├── installation.md
-│   ├── networking.md
-│   └── ssh.md
-└── comparison/
-    └── centos-vs-ubuntu.md
 ```
