@@ -1,7 +1,7 @@
 # Automated Website Provisioning on CentOS Using Vagrant
 
 ## Overview
-This document describes the automated provisioning of a static website on a CentOS Stream 9 virtual machine using Vagrant.
+This document describes the automated provisioning of a static website on a **CentOS Stream 9 virtual machine** using **Vagrant**.
 
 All automation implemented here is a direct conversion of the manual steps previously performed:
 - Installing Apache (httpd)
@@ -9,7 +9,7 @@ All automation implemented here is a direct conversion of the manual steps previ
 - Managing services
 - Accessing the website via VM IP
 
-The goal is to replace manual server setup with repeatable, code-driven automation.
+The goal is to replace manual server setup with **repeatable, code-driven automation**.
 
 ---
 
@@ -30,10 +30,10 @@ Private network and public (bridged) network are configured in the Vagrantfile:
     config.vm.network "public_network"
 
 ### Explanation
-- Private Network
+- **Private Network**
   - Assigns a static IP address
   - Enables predictable access from the host machine
-- Public Network (Bridged)
+- **Public Network (Bridged)**
   - Makes the VM appear as a physical machine on the local network
   - Matches real-world server networking behavior
 
@@ -50,92 +50,93 @@ Memory is allocated using provider-specific configuration:
     end
 
 ### Explanation
-OBOBOBOBOB- Allocates 1 GB RAM to the VM
+- Allocates **1 GB RAM** to the VM
 - Prevents excessive host resource usage
-OBOBOB- Simulates real server constraints
-OBOB
+- Simulates real server constraints
+
 Resource configuration is now defined as code instead of manual hypervisor tuning.
 
-OBOBOB---
-OBOBOB
-OBOBOB## Automated Provisioning (Shell Script)
+---
 
-OBProvisioning is handled using an inline shell script defined in the Vagrantfile.
+## Automated Provisioning (Shell Script)
+
+Provisioning is handled using an **inline shell script** defined in the Vagrantfile.
 
 Provisioning logic:
-OBOBOBOBOBOBOB
+
     yum install httpd wget unzip vim -y
-OBOBOBOBOB    systemctl start httpd
-    systemctl enabled httpd
-OBOBOBOB    mkdir -p /tmp/finance
+    systemctl start httpd
+    systemctl enable httpd
+    mkdir -p /tmp/finance
     cd /tmp/finance
-OB    wget https://www.tooplate.com/zip-templates/2135_mini_finance.zip
+    wget https://www.tooplate.com/zip-templates/2135_mini_finance.zip
     unzip -o 2135_mini_finance.zip
-OBOBOBOBOBOBOBOB    cp -r 2135_mini_finance/* /var/www/html/
+    cp -r 2135_mini_finance/* /var/www/html/
     systemctl restart httpd
-OBOB    cd /tmp/
+    cd /tmp/
     rm -rf /tmp/finance
-OBOBOBOBOB
+
 ### What This Automates
 - Installs required packages:
-OBOB  - Apache (httpd)
+  - Apache (httpd)
   - wget, unzip, vim
-OBOBOBOB- Starts and enables the Apache service
+- Starts and enables the Apache service
 - Downloads an HTML website template
-OBOBOB- Deploys website files to /var/www/html
-OBOB- Restarts Apache to apply changes
+- Deploys website files to `/var/www/html`
+- Restarts Apache to apply changes
 - Cleans up temporary files
-OBOB
+
 These steps are identical to the manual setup, now executed automatically during VM creation.
-OBOBOB
+
 ---
-OB
+
 ## Website Deployment Details
 - Web Server: Apache (httpd)
-- Document Root: /var/www/html
+- Document Root: `/var/www/html`
 - Template Source: Tooplate – Mini Finance
 - Access Method: Browser using VM IP address
-OB
-Once vagrant up completes, the website is immediately available without any manual intervention.
-OBOB
+
+Once `vagrant up` completes, the website is immediately available without any manual intervention.
+
 ---
-OB
-OBOBOBOBOBOB## End-to-End Automation Flow
-OBOB1. vagrant up is executed
+
+## End-to-End Automation Flow
+1. `vagrant up` is executed
 2. CentOS VM is created from the Vagrant box
-OBOBOB3. Networking and memory are configured
+3. Networking and memory are configured
 4. Apache is installed and started
-OBOBOBOB5. Website template is downloaded and deployed
-OBOBOB6. Website becomes accessible via browser
-OBOBOB
+5. Website template is downloaded and deployed
+6. Website becomes accessible via browser
+
 No SSH login is required at any stage.
 
 ---
-OAOAOAOA
+
 ## Manual vs Automated Comparison
 
-OBManual Setup:
-OBOBOBOBOBOBOBOB- SSH into VM
+**Manual Setup**
+- SSH into VM
 - Install packages manually
-OBOBOB- Copy website files manually
+- Copy website files manually
 - Inconsistent results
-OBOBOBOBOBOBOBOB
-Vagrant Automation:
-OBOBOBOBOBOB- Fully automated
+
+**Vagrant Automation**
+- Fully automated
 - Scripted provisioning
 - Automated deployment
-OBOB- Repeatable and consistent
+- Repeatable and consistent
 
 ---
-OBOBOBOBOBOBOB
+
 ## DevOps Learning Outcome
-OBOBOBOBOBThis setup demonstrates:
+This setup demonstrates:
 - Infrastructure as Code (IaC)
-OBOBOBOB- Automated server provisioning
+- Automated server provisioning
 - Service deployment through configuration
-OBOBOBOBOBOB- Reproducible environments
+- Reproducible environments
 
-These same principles apply directly to cloud VM provisioning, CI/CD pipelines, and configuration management tools.
-
----
+These same principles apply directly to:
+- Cloud VM provisioning
+- CI/CD pipelines
+- Configuration management tools
 
