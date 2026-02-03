@@ -110,9 +110,3 @@ These same concepts apply to:
 - Containerized applications
 
 ---
-
-## Next Step
-- Parameterize configuration values
-- Separate provisioning scripts
-- Move toward cloud-based deployments
-
