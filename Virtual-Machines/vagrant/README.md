@@ -1,51 +1,127 @@
-# Vagrant – VM Automation
+# Vagrant – Automated Virtual Machine Management
 
 ## Overview
-After manually creating and managing virtual machines, the next step in my DevOps learning journey is **automating VM lifecycle management**.
+This directory documents my learning and hands-on work with **Vagrant** as part of my DevOps journey.
 
-This section focuses on **Vagrant**, a tool used to create, configure, and manage virtual machines in a **repeatable and automated way** using configuration files instead of manual steps.
+After manually creating and managing virtual machines, Vagrant was introduced to **automate VM lifecycle management** and move toward **Infrastructure as Code (IaC)**.
 
-This transition follows a core DevOps principle:
-> Manual understanding first, automation second.
+The focus here is not just on running commands, but on understanding how **manual server workflows are translated into automation**.
 
 ---
 
 ## Why Vagrant
-Manual VM management becomes inefficient when:
-- Multiple VMs are required
-- Environments must be replicated
-- Configuration consistency is critical
+Manual VM management becomes inefficient as environments grow:
+- Repetitive OS setup
+- Manual service installation
+- Difficult replication
+- Inconsistent environments
 
 Vagrant solves these problems by:
-- Eliminating manual OS installation
-- Using prebuilt VM images (Vagrant boxes)
-- Managing VMs through a single configuration file (`Vagrantfile`)
-- Providing CLI-based lifecycle management
+- Using prebuilt VM images (boxes)
+- Defining infrastructure in a `Vagrantfile`
+- Automating VM creation, networking, and provisioning
+- Enabling reproducible environments
+
+This aligns with real-world DevOps practices.
 
 ---
 
-## What Is Covered Here
-This directory documents:
-- Vagrant fundamentals
-- VM automation using Vagrant
+## What Is Covered
+
+### 1. Single VM Automation (CentOS)
 - Automated CentOS VM creation
-- VM lifecycle commands
-- VM provisioning concepts
+- Apache (`httpd`) installation
+- Static website deployment
+- Service management using provisioning
 
-Only **CentOS** is documented in detail to avoid duplication, as the same Vagrant workflow applies to other Linux distributions.
+File:
+- `automation-centos-website.md`
 
 ---
 
-## Prerequisites
-- Virtualization enabled in BIOS
-- Oracle VirtualBox installed
-- Vagrant installed
-- Command-line interface (Git Bash / Terminal)
+### 2. Ubuntu LAMP + WordPress (Manual First)
+- Ubuntu VM setup
+- LAMP stack installation
+- WordPress deployment
+- Database-backed application hosting
+
+Documented manually first to ensure understanding before automation.
+
+File:
+- `ubuntu-lamp-wordpress.md`
+
+---
+
+### 3. Multi-VM Setup Using Vagrant
+- Multiple VMs defined in a single Vagrantfile
+- Role-based servers:
+  - `web01` (Ubuntu)
+  - `web02` (Ubuntu)
+  - `db01` (CentOS)
+- Private networking for all VMs
+- Targeted provisioning only for database node
+- Hostnames configured per VM
+
+File:
+- `multi-vm.md`
+
+---
+
+### 4. Resource, Networking, and Provisioning Concepts
+- CPU and RAM configuration
+- Private networking
+- Synced directories
+- Shell provisioning
+
+Files:
+- `resources.md`
+- `networking.md`
+- `sync-directories.md`
+- `provisioning.md`
+
+---
+
+### 5. systemd & Tomcat (Manual Learning)
+- Manual Tomcat 10 installation on CentOS
+- Creation of custom systemd service
+- Understanding `systemctl`, service lifecycle, and security practices
+
+This was documented as a **learning exercise**, not automated yet.
+
+File:
+- `centos/tomcat-systemctl.md`
 
 ---
 
 ## Directory Structure
-```text
+
+```
 vagrant/
 ├── README.md
-└── centos.md
+├── resources.md
+├── networking.md
+├── sync-directories.md
+├── provisioning.md
+├── web-hosting.md
+├── automation-centos-website.md
+├── ubuntu-lamp-wordpress.md
+└── multi-vm.md
+
+```
+---
+
+## DevOps Learning Outcome
+Through this section, I learned to:
+- Move from manual VM management to automation
+- Define infrastructure using code
+- Provision services automatically
+- Model multi-node environments
+- Understand service management with systemd
+
+These skills directly map to:
+- Cloud virtual machines
+- Configuration management tools
+- CI/CD infrastructure
+- Scalable DevOps environments
+
+---
