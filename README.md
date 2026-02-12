@@ -64,6 +64,14 @@ and **how different DevOps concepts connect together**.
 
 ---
 
+### 7️⃣ Containers (Introduction)
+- Overview of containerization
+- Docker basics
+- Containers vs Virtual Machines
+- Introduction to microservices architecture
+
+---
+
 ## 🧠 Learning Philosophy
 - Learn by doing, not memorizing
 - Break systems intentionally and fix them
