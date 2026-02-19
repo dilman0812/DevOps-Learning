@@ -72,6 +72,20 @@ and **how different DevOps concepts connect together**.
 
 ---
 
+### 8️⃣ Bash Scripting
+Hands-on shell scripting focused on automation and infrastructure tasks.
+
+- Bash fundamentals and script structure
+- System information scripting
+- Static web deployment automation
+- Variables and command-line argument handling
+- Conditional logic and monitoring scripts
+- Loop constructs (`for`, `while`)
+- Remote execution via SSH
+- Multi-OS deployment automation
+
+---
+
 ## 🧠 Learning Philosophy
 - Learn by doing, not memorizing
 - Break systems intentionally and fix them
