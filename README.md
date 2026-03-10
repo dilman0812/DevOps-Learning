@@ -1,127 +1,156 @@
-# DevOps Learning Journey – Dilman Sandhu 🚀
+# DevOps Learning Journey
 
-This repository documents my **structured DevOps learning journey**, focused on
-strong fundamentals, hands-on practice, and real-world DevOps workflows.
+This repository documents my structured journey toward becoming a DevOps Engineer.  
+It contains hands-on experiments, infrastructure setups, automation scripts, and conceptual notes covering core DevOps domains.
 
-The goal of this repository is to clearly showcase **what I learned**, **how I practiced it**,
-and **how different DevOps concepts connect together**.
+The goal of this repository is to build strong foundations in:
 
----
-
-## 📌 Learning Order & Topics Covered
-
-### 1️⃣ Linux
-- Linux directory structure
-- File permissions and ownership
-- Users and groups
-- Process and service management
-- SSH and basic networking commands
-- Linux interview preparation
-
----
-
-### 2️⃣ Git
-- Git fundamentals (`init`, `add`, `commit`, `push`)
-- Branching and merging
-- Resolving merge conflicts
-- Git usage in DevOps workflows
-
----
-
-### 3️⃣ Virtual Machines
-- Virtual machine concepts
-- CentOS server setup
-- Vagrant basics
-- Multi-VM provisioning
-- VM networking and SSH access
-- Local infrastructure reproducibility
-
----
-
-### 4️⃣ Projects
-- **VProfile Local DevOps Stack**
-  - A completed hands-on DevOps project
-  - Multi-VM local DevOps environment
-  - Infrastructure provisioning using Vagrant
-  - Linux service configuration and troubleshooting
-
----
-
-### 5️⃣ Variables, JSON & YAML
-- Variables in configuration management
-- JSON syntax and structure
-- YAML syntax and use cases
-- Configuration files used in DevOps tools and pipelines
-
----
-
-### 6️⃣ Networking
-- IP addressing and ports
-- DNS basics
-- HTTP request/response flow
-- Debugging connectivity issues
-- Local and private networking concepts
-
----
-
-### 7️⃣ Containers (Introduction)
-- Overview of containerization
-- Docker basics
-- Containers vs Virtual Machines
-- Introduction to microservices architecture
-
----
-
-### 8️⃣ Bash Scripting
-Hands-on shell scripting focused on automation and infrastructure tasks.
-
-- Bash fundamentals and script structure
-- System information scripting
-- Static web deployment automation
-- Variables and command-line argument handling
-- Conditional logic and monitoring scripts
-- Loop constructs (`for`, `while`)
-- Remote execution via SSH
-- Multi-OS deployment automation
-
----
-
-## 🧠 Learning Philosophy
-- Learn by doing, not memorizing
-- Break systems intentionally and fix them
-- Understand **why** things work, not just **how**
-- Document learning clearly for revision and interviews
-
----
-
-## 📂 Repository Structure
-
-Each numbered directory represents a learning stage and contains:
-- Notes and documentation
-- Commands and configurations used
-- Practical learning artifacts
-- Issues faced and solutions (where applicable)
-
----
-
-## 🎯 Outcome
-This repository reflects my foundation in:
 - Linux systems
-- Infrastructure basics
-- Version control
-- Virtualized environments
-- Practical DevOps problem-solving
+- Networking fundamentals
+- Infrastructure automation
+- Cloud platforms
+- Containerization
+- CI/CD workflows
 
-It also serves as a reference point for progressing into:
-- CI/CD pipelines
-- Containers (Docker)
-- Kubernetes
-- Infrastructure as Code
-- Monitoring and observability
+All modules are organized progressively, reflecting how DevOps concepts build on top of each other.
 
 ---
 
-## 🔗 Related Project
-- **VProfile Local DevOps Stack**  
-  https://github.com/dilman0812/vprofile-local-devops-stack
+# Repository Structure
 
+## 01_Linux_Basics
+Core Linux concepts and command-line usage required for managing servers.
+
+Topics covered:
+- File system navigation
+- Permissions and ownership
+- Process management
+- Package management
+- System monitoring commands
+
+---
+
+## 02_Virtualization
+Introduction to virtualization concepts and how virtual machines enable infrastructure isolation and reproducibility.
+
+Topics covered:
+- Hypervisors
+- Virtual machine lifecycle
+- Resource allocation
+- VM networking basics
+
+---
+
+## 03_Vagrant
+Infrastructure provisioning using Vagrant to automate local development environments.
+
+Topics covered:
+- Vagrantfile configuration
+- Multi-VM provisioning
+- Shell provisioning scripts
+- Reproducible environments
+
+---
+
+## 04_Projects
+
+Hands-on infrastructure projects implemented to apply DevOps concepts in real scenarios.
+
+### VProfile Local DevOps Stack
+Multi-tier application infrastructure provisioned locally using Vagrant and VirtualBox.
+
+Project highlights:
+- Multi-VM architecture
+- Service dependency management
+- Local infrastructure automation
+- Real-world debugging of service connectivity
+
+Project Repository:  
+https://github.com/dilman0812/vprofile-local-devops-stack
+
+---
+
+## 05_Variables_JSON_YAML
+Configuration fundamentals used across modern DevOps tooling.
+
+Topics covered:
+- Linux environment variables
+- JSON data structures
+- YAML configuration syntax
+- Configuration management principles
+
+Examples included for practical understanding.
+
+---
+
+## 06_Networking
+Networking concepts required for cloud infrastructure and distributed systems.
+
+Topics covered:
+- IP addressing
+- Ports and protocols
+- DNS resolution
+- TCP vs UDP
+- Subnetting and CIDR
+- NAT and firewalls
+- Network troubleshooting tools
+
+---
+
+## 07_Containers_Intro
+Introduction to containerization and how containers differ from traditional virtual machines.
+
+Topics covered:
+- What containers are
+- Container vs virtual machine architecture
+- Container runtimes
+- Basic container workflow
+- Role of containers in modern DevOps pipelines
+
+---
+
+## 08_Bash_Scripting
+Automation using Bash scripting for system administration and DevOps workflows.
+
+Topics covered:
+- Bash variables
+- Conditionals and loops
+- Script automation
+- System task automation
+- Writing reusable shell scripts
+
+Example scripts demonstrate automation of common system operations.
+
+---
+
+## 09_AWS
+Introduction to AWS cloud services and infrastructure deployment.
+
+Topics covered:
+- AWS fundamentals
+- EC2 instance provisioning
+- Security groups
+- Load balancing
+- Auto scaling
+- Cloud infrastructure architecture
+
+Hands-on exercises demonstrate deploying scalable cloud infrastructure.
+
+---
+
+# Learning Philosophy
+
+This repository emphasizes:
+
+- **Hands-on experimentation**
+- **Infrastructure reproducibility**
+- **Practical troubleshooting**
+- **Progressive learning of DevOps systems**
+
+Each module builds on previous concepts to simulate real-world infrastructure and operations workflows.
+
+---
+
+# Goal
+
+The objective of this repository is to build a strong foundation in DevOps engineering and cloud infrastructure by combining theoretical understanding with hands-on implementation.
