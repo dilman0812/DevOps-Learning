@@ -54,19 +54,52 @@ Topics covered:
 
 ## 04_Projects
 
-Hands-on infrastructure projects implemented to apply DevOps concepts in real scenarios.
+Hands-on infrastructure projects implemented to apply DevOps concepts in real-world scenarios.
 
-### VProfile Local DevOps Stack
-Multi-tier application infrastructure provisioned locally using Vagrant and VirtualBox.
+---
 
-Project highlights:
-- Multi-VM architecture
-- Service dependency management
-- Local infrastructure automation
-- Real-world debugging of service connectivity
+### 1️⃣ VProfile Local DevOps Stack
 
-Project Repository:  
+Multi-tier application stack provisioned locally using Vagrant and VirtualBox to simulate a production-like environment.
+
+**Key Highlights:**
+- Multi-VM architecture with isolated services
+- Service dependency management and networking
+- Infrastructure provisioning using Vagrant
+- Debugging distributed system failures
+
+🔗 Repository:  
 https://github.com/dilman0812/vprofile-local-devops-stack
+
+---
+
+### 2️⃣ AWS vProfile Lift & Shift Migration
+
+Migration of the same multi-tier application from local infrastructure to AWS using a **Lift & Shift strategy**, transitioning from manually managed VMs to scalable cloud infrastructure.
+
+**Architecture Overview:**
+- Application Load Balancer (HTTPS entry point)
+- Auto Scaling Group (application tier)
+- Private backend services (MySQL, Memcached, RabbitMQ)
+- Route 53 for internal service discovery
+- S3 for artifact storage
+
+**Key Achievements:**
+- Designed production-style AWS architecture
+- Implemented network isolation using Security Groups
+- Configured HTTPS with ACM and custom domain
+- Built self-healing infrastructure using Auto Scaling
+- Deployed application using artifact-based workflow
+
+**DevOps Concepts Demonstrated:**
+- Cloud infrastructure design (AWS)
+- Load balancing and horizontal scaling
+- DNS-based service communication
+- Secure networking and access control
+- Transition from local → cloud environments
+
+🔗 Repository:  
+https://github.com/dilman0812/aws-vprofile-lift-and-shift
 
 ---
 
